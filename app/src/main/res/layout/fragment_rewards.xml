@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@color/baseWhiteBgColor">
+
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true" android:layout_alignParentTop="true">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/til_rewards_balance_lock"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:theme="@style/EditTextHintLightGrey">
+
+                <com.guarda.ethereum.customviews.RobotoEditText
+                        android:id="@+id/et_rewards_balance_lock"
+                        app:backgroundTint="@color/baseWhiteBgColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:enabled="false"
+                        android:gravity="start"
+                        android:hint="@string/transaction_history_your_rewards_lock"
+                        android:textColorHint="@color/greyHintColor"
+                        android:inputType="number"
+                        android:maxLength="100"
+                        android:maxLines="1"
+                        android:text="-.-"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/darkGreyText"
+                        android:textSize="16sp"/>
+                <Button
+                        android:id="@+id/btn_confirm_rewards"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="15dp"
+                        style="@style/colorButtonStyle"
+                        android:elevation="5dp"
+                        android:paddingEnd="15dp"
+                        android:text="@string/withdraw_confirm"/>
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
